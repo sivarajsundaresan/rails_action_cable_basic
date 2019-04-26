@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  user: postgres
+  password: postgres
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: action_cable
+
+test:
+  <<: *default
+  database: action_cable_test
